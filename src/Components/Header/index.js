@@ -1,4 +1,4 @@
-import { Input, Grid } from "@mui/material";
+import { TextField, Grid } from "@mui/material";
 
 const Header = ({
   userSearchByEmail,
@@ -10,10 +10,10 @@ const Header = ({
     <>
       <Grid container>
         <Grid item xs={6}>
-          <Input />
+          <TextField value={userSearchByEmail} onChange={(e) => setUserSearchByEmail(e.target.value)} label="Search by user email" disabled={userSearchByName} />
         </Grid>
         <Grid item xs={6}>
-          <Input />
+          <TextField value={userSearchByName} onChange={(e) => setUserSearchByName(e.target.value)} label="Search by user name" disabled={userSearchByEmail} />
         </Grid>
       </Grid>
     </>

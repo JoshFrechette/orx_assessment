@@ -4,7 +4,9 @@ const Users = (users: any) => {
     return (
         <div>
             {users.users.map((user: any) => (
-                <User data={user} />
+                <div key={user.id} >
+                    <User data={user} />
+                </div>
             ))}
         </div>
     )

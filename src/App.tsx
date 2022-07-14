@@ -6,6 +6,7 @@ import Header from './Components/Header';
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [filteredUsers, setFilteredUsers] = useState([]);
   const [todos, setTodos] = useState([]);
   const [userSearchByEmail, setUserSearchByEmail] = useState('');
   const [userSearchByName, setUserSearchByName] = useState('');
@@ -17,6 +18,7 @@ function App() {
         console.log('res', response);
         const newUsers = response.data;
         setUsers(newUsers);
+        setFilteredUsers(newUsers);
       });
 
     axios
@@ -31,7 +33,12 @@ function App() {
     requestData();
   }, [requestData]);
 
-  console.log('users', users);
+  // useEffect(() => {
+  //   let newFilteredUsers = filteredUsers.filter(() => 
+  //     users.includes(userSearchByName);
+  //   )
+
+  // }, [userSearchByName]);
 
   return (
     <div className="App">
@@ -42,7 +49,7 @@ function App() {
         setUserSearchByName={setUserSearchByName}
       />
       {users.length > 0 && (
-        <Users users={users} />
+        <Users users={filteredUsers} />
       )}
     </div>
   );
