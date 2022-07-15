@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/orx_assessment/static/js/main.26d9ff29.js",
+    "static/js/787.744fe985.chunk.js": "/orx_assessment/static/js/787.744fe985.chunk.js",
+    "index.html": "/orx_assessment/index.html",
+    "main.26d9ff29.js.map": "/orx_assessment/static/js/main.26d9ff29.js.map",
+    "787.744fe985.chunk.js.map": "/orx_assessment/static/js/787.744fe985.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.26d9ff29.js"
+  ]
+}
